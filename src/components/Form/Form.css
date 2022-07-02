@@ -1,0 +1,13 @@
+form input{
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 10px;
+}
+form button.btn{
+    border-radius: 8px;
+}
+form{
+    height: 100%;
+}

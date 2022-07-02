@@ -1,0 +1,31 @@
+.manager{
+    padding: 50px;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.divider{
+    height: 30px;
+    width: 4px;
+    margin: 0 15px;
+    margin-bottom: 5px;
+    background-color: var(--acenture-color);
+}
+.header{
+    padding-left: 20px;
+}
+.manager .header h2{
+    font-weight: 700;
+    color: #82849e;
+}
+.manager .header h2:hover{
+    color: var(--acenture-color);
+    cursor: pointer;
+}
+.manager .header h2.active{
+    color:var(--acenture-color)
+}
+div.tasks-events{
+    margin-top: 40px;
+}

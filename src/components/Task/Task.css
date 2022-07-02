@@ -1,0 +1,20 @@
+.done{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color:#b3cbfd;
+}
+div.task{
+    height: 100px;
+    background-color: #ffff;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.task button.done{
+    margin-bottom: 3px;
+}
+.task button.done:hover{
+    background-color: #8394b8;
+    transition: .4s;
+}
