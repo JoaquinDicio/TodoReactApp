@@ -1,4 +1,4 @@
-.done{
+.done-btn{
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -11,10 +11,14 @@ div.task{
     border-radius: 8px;
     margin: 10px 0;
 }
-.task button.done{
+div .task.done h5{
+text-decoration: line-through;
+color: red;
+}
+.task button.done-btn{
     margin-bottom: 3px;
 }
-.task button.done:hover{
+.task button.done-btn:hover{
     background-color: #8394b8;
     transition: .4s;
 }

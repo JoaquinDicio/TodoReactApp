@@ -1,13 +1,12 @@
-import React from 'react'
 import './Aside.css'
 import Day from '../Day/Day'
 import AddButton from '../AddButton/AddButton'
-import { useContext } from 'react'
+import { useContext,useEffect,useState } from 'react'
 import { GenContext } from '../../context/GeneralContext'
 import Form from '../Form/Form'
 
-export default function Aside({days}) {
-  let {form,setForm}=useContext(GenContext)
+export default function Aside() {
+  let {form,days,selected,setSelected}=useContext(GenContext)
 
   return (
     <>
@@ -21,7 +20,7 @@ export default function Aside({days}) {
         <>
         <div className="aside-items">
             {days.map((day)=>
-            <Day name={day.name} num={day.number} month={day.month}/>
+            <Day id={day.id}name={day.name} num={day.number} month={day.month} selected={day.id==selected?'selected':''} onClick={setSelected}/>
             )}
         </div>
         <div className="d-flex justify-content-center">

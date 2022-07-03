@@ -19,6 +19,10 @@
     font-weight: 700;
     color: #82849e;
 }
+
+.manager .empty-msg{
+    color: #82849e;
+}
 .manager .header h2:hover{
     color: var(--acenture-color);
     cursor: pointer;
