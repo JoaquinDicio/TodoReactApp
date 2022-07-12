@@ -20,7 +20,7 @@ export default function Aside() {
         <>
         <div className="aside-items">
             {days.map((day)=>
-            <Day id={day.id}name={day.name} num={day.number} month={day.month} selected={day.id==selected?'selected':''} onClick={setSelected}/>
+            <Day key={day.id} id={day.id}name={day.name} num={day.number} month={day.month} selected={day.id==selected?'selected':''} onClick={setSelected}/>
             )}
         </div>
         <div className="d-flex justify-content-center">

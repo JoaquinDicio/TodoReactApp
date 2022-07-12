@@ -22,3 +22,7 @@ color: red;
     background-color: #8394b8;
     transition: .4s;
 }
+.task .done{
+    text-decoration: line-through;
+    color: red;
+}

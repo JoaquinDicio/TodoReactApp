@@ -5,14 +5,20 @@ import { GenContext } from '../../context/GeneralContext'
 import moment from 'moment'
 
 export default function Manager() {
-  let {tasks,selected}=useContext(GenContext)
+  let {tasks,selected,setTasks}=useContext(GenContext)
   let [visibleTasks,setvisibleTasks]=useState([])
-
+  let [visibleDone,setVisibleDone]=useState([])
+  let [doneTasks,setDoneTasks]=useState([])
   useEffect(()=>{
     setvisibleTasks(tasks.filter((task)=>
-    task.taskDate==moment().add(selected,'days').format('yyyy')+'-'+moment().add(selected,'days').format('MM')+'-'+moment().add(selected,'days').format('DD')
+    task.taskDate==moment().add(selected,'days').format('yyyy')+'-'+moment().add(selected,'days').format('MM')+'-'+moment().add(selected,'days').format('DD')&&task.done==false
     ))
-  },[selected,tasks])
+    setVisibleDone(
+      doneTasks.filter((task)=>
+        task.taskDate==moment().add(selected,'days').format('yyyy')+'-'+moment().add(selected,'days').format('MM')+'-'+moment().add(selected,'days').format('DD')
+      )
+    )
+  },[selected,tasks,doneTasks])
   return (
     <div className='manager d-flex flex-column'>
         <div className="header d-flex align-items-center justify-content-start">
@@ -28,9 +34,17 @@ export default function Manager() {
             </div>
             :
             visibleTasks.map((task)=>
-            <Task taskName={task.taskName}/>)
+            <Task done={task.done} setTasks={setTasks} setDoneTasks={setDoneTasks} key={task.id} tasks={tasks} id={task.id} taskName={task.taskName}/>)
           }
         </div>
+        {
+          doneTasks.length>0?
+          (<div className="task-events">
+            {visibleDone.map((task)=>
+            <Task done={task.done} setTasks={setTasks} setDoneTasks={setDoneTasks} key={task.id} tasks={tasks} id={task.id} taskName={task.taskName}/>)}
+          </div>):
+          <></>
+        }
     </div>
   )
 }

@@ -2,7 +2,6 @@ div.aside-container{
     min-width:400px;
     padding: 50px 25px;
     background-color:var(--main-color);
-    height: 100vw;
 }
 div.title{
     padding-bottom: 20px;

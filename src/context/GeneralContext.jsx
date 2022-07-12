@@ -23,19 +23,17 @@ export default function GeneralContext({children}) {
   let [form,setForm]=useState(false)
   //storage of events and tasks
   let [tasks,setTasks]=useState([])
-  let[events,setEvents]=useState([])
 
   //function to add a task
   function addTask(){
     let name=document.querySelector('#form-input').value
     let date=document.querySelector('#date-input').value
     setForm(false)
-    setTasks([{taskName:name,taskDate:date},...tasks])
-    console.log(tasks)
+    setTasks([{taskName:name,taskDate:date,id:tasks.length,done:false},...tasks])
   }
 
   return (
-    <Provider value={{setForm,form,addTask,tasks,days,selected,setSelected}}>
+    <Provider value={{setForm,form,addTask,tasks,days,selected,setSelected,setTasks}}>
       {children}
     </Provider>
   )
