@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/JoaquinDicio/TodoReactApp/deployments/activity_log/static/css/main.df3d1858.css",
-    "main.js": "/JoaquinDicio/TodoReactApp/deployments/activity_log/static/js/main.d6dd9085.js",
-    "index.html": "/JoaquinDicio/TodoReactApp/deployments/activity_log/index.html",
-    "main.df3d1858.css.map": "/JoaquinDicio/TodoReactApp/deployments/activity_log/static/css/main.df3d1858.css.map",
-    "main.d6dd9085.js.map": "/JoaquinDicio/TodoReactApp/deployments/activity_log/static/js/main.d6dd9085.js.map"
+    "main.css": "/TodoReactApp/static/css/main.df3d1858.css",
+    "main.js": "/TodoReactApp/static/js/main.d6dd9085.js",
+    "index.html": "/TodoReactApp/index.html",
+    "main.df3d1858.css.map": "/TodoReactApp/static/css/main.df3d1858.css.map",
+    "main.d6dd9085.js.map": "/TodoReactApp/static/js/main.d6dd9085.js.map"
   },
   "entrypoints": [
     "static/css/main.df3d1858.css",
