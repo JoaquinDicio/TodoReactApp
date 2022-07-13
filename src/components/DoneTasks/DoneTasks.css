@@ -1,0 +1,9 @@
+.done-tasks button{
+    max-width: 200px;
+}
+.done-tasks .done-header{
+    margin: 30px auto;
+}
+.done-tasks{
+    margin-bottom: 50px;
+}

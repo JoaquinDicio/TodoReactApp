@@ -1,10 +1,15 @@
 import './Task.css'
+import { GenContext } from '../../context/GeneralContext'
+import { useContext } from 'react'
 
-export default function Task({taskName,id,tasks,setDoneTasks,done}) {
+export default function Task({taskName,id,setDoneTasks,done}) {
+  let {tasks,setTasks}=useContext(GenContext)
+  
+  //changes the DONE property at the selected task
   function changeStatus(){
     let clickedTask=tasks.find(task=>task.id==id)
-    let index=tasks.indexOf(clickedTask)
-    if (tasks[index].done==false){
+    let index=tasks.indexOf(clickedTask) //search the index of the clicked task
+    if (tasks[index].done==false){ //changes the value
       tasks[index].done=true
       setDoneTasks(tasks.filter(task=>task.done==true))
     }else{

@@ -6,7 +6,8 @@ export default function AddButton({}) {
   let {setForm}=useContext(GenContext)
   return (
     <>
-    <button onClick={()=>setForm(true)} className='btn btn-add'>
+    <button onClick={()=>setForm(true)} className='btn btn-add'> 
+    {/* shows the form to add a task */}
       +
     </button>
     </>

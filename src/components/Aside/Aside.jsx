@@ -11,9 +11,6 @@ export default function Aside() {
   return (
     <>
     <div className="aside-container d-flex row justify-content-center align-items-start">
-        <div className="title">
-            <h1 className='text-center'>PLANNER</h1>
-        </div>
         {form?
         <Form/>
         :

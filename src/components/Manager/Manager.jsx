@@ -3,6 +3,7 @@ import Task from '../Task/Task'
 import { useContext, useEffect,useState } from 'react'
 import { GenContext } from '../../context/GeneralContext'
 import moment from 'moment'
+import DoneTasks from '../DoneTasks/DoneTasks'
 
 export default function Manager() {
   let {tasks,selected,setTasks}=useContext(GenContext)
@@ -23,8 +24,6 @@ export default function Manager() {
     <div className='manager d-flex flex-column'>
         <div className="header d-flex align-items-center justify-content-start">
             <h2 className='text-center active'>My tasks</h2>
-            <div className='divider'></div>
-            <h2 className='text-center'>Events</h2>
         </div>
         <div className="tasks-events">
           {
@@ -39,10 +38,8 @@ export default function Manager() {
         </div>
         {
           doneTasks.length>0?
-          (<div className="task-events">
-            {visibleDone.map((task)=>
-            <Task done={task.done} setTasks={setTasks} setDoneTasks={setDoneTasks} key={task.id} tasks={tasks} id={task.id} taskName={task.taskName}/>)}
-          </div>):
+          <DoneTasks tasks={tasks} setTasks={setTasks} setDoneTasks={setDoneTasks} visibleDone={visibleDone}/>
+          :
           <></>
         }
     </div>

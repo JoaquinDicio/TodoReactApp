@@ -1,14 +1,9 @@
 div.aside-container{
     min-width:400px;
+    max-width: 500px;
     padding: 50px 25px;
     background-color:var(--main-color);
-}
-div.title{
-    padding-bottom: 20px;
-}
-div.title h1{
-    font-weight: bold;
-    color: #FFFF;
+    height: 100vh;
 }
 div.aside-items{
     margin-bottom: 20px;
